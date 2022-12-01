@@ -44,3 +44,9 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+// 1. controllers
+// 2. views
+// 3. models
+
