@@ -1,14 +1,14 @@
 [
     {
       "title": "Doom: Pregnancy Test Edition",
-      "description": "Industrious gamers have gotten Doom to run on iPods, old PCs, and even treadmills, but how about a digital pregnancy-test stick? California programmer Foone Turing had to replace the test's original CPU and screen, but he got the game to run in the shell that remained."
+      "contents": "Industrious gamers have gotten Doom to run on iPods, old PCs, and even treadmills, but how about a digital pregnancy-test stick? California programmer Foone Turing had to replace the test's original CPU and screen, but he got the game to run in the shell that remained."
     },
     {
-      "name": "Why Ember may not be the best choice",
-      "description": "Ember has seen massive stagnation over past 5 years and faces obscurity in future. Big companies like Netflix and Airbnb have dumped ember and moved to other frameworks like react. Ember has a very poor support offering due to a shrinking community and is plagued with outdated resources. Too complex to be implemented in small projects. Takes too much time to configure and use which eats away into productivity. In comparison to react and Vue, ember is extremely complicated and difficult to learn especially for beginners."
+      "title": "Why Ember may not be the best choice",
+      "contents": "Ember has seen massive stagnation over past 5 years and faces obscurity in future. Big companies like Netflix and Airbnb have dumped ember and moved to other frameworks like react. Ember has a very poor support offering due to a shrinking community and is plagued with outdated resources. Too complex to be implemented in small projects. Takes too much time to configure and use which eats away into productivity. In comparison to react and Vue, ember is extremely complicated and difficult to learn especially for beginners."
     },
     {
-      "name": "Cybersecurity and You",
-      "description": "Cybersecurity is the practice of protecting critical systems and sensitive information from digital attacks. Also known as information technology (IT) security, cybersecurity measures are designed to combat threats against networked systems and applications, whether those threats originate from inside or outside of an organization."
+      "title": "Cybersecurity and You",
+      "contents": "Cybersecurity is the practice of protecting critical systems and sensitive information from digital attacks. Also known as information technology (IT) security, cybersecurity measures are designed to combat threats against networked systems and applications, whether those threats originate from inside or outside of an organization."
     }
   ]

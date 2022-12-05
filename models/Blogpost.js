@@ -23,11 +23,11 @@ Blogpost.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
+    user_name: {
+      type: DataTypes.STRING,
       references: {
         model: 'user',
-        key: 'id',
+        key: 'name',
       },
     },
   },

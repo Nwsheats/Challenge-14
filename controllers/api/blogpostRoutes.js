@@ -1,6 +1,32 @@
 const router = require('express').Router();
-const { Blogpost } = require('../../models');
+const { Blogpost, Comment } = require('../../models');
 const sessAuth = require('../../utils/auth');
+
+router.get('/', sessAuth, async (req, res) => {
+    try {
+      const blogposts = await Blogpost.findAll({
+        include: [Comment]
+    });
+      res.status(200).json(blogposts);
+    } catch (err) {
+      console.error(err);
+      res.status(400).json(err);
+    }
+  });
+  
+  router.get('/:id', async (req, res) => {
+    try {
+    const blogposts = await Blogpost.findOne({
+      where: {id: req.params.id},
+      include: [Comment]
+  })
+    res.status(200).json(blogposts);
+  } catch (err) {
+    console.error(err);
+          res.status(400).json(err);
+    }
+  });
+
 
 router.post('/', sessAuth, async (req, res) => {
   try {
@@ -14,6 +40,21 @@ router.post('/', sessAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
+router.put('/:id', async (req, res) => {
+    try {
+      const updateBlogpost = await Blogpost.update(req.body, {
+        where: {
+          id: req.params.id
+        }
+      });
+      res.status(200).json(updateBlogpost);
+      } catch (err) {
+        console.error(err);
+        res.status(400).json(err);
+  }}); 
+
 
 router.delete('/:id', sessAuth, async (req, res) => {
   try {

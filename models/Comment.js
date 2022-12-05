@@ -11,10 +11,6 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     content: {
       type: DataTypes.STRING,
     },
@@ -23,11 +19,11 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
+    user_name: {
+      type: DataTypes.STRING,
       references: {
         model: 'user',
-        key: 'id',
+        key: 'name',
       },
     },
     blogpost_id: {
