@@ -1,7 +1,10 @@
-// model for users that at least contains user (possibly username) and password
+const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const blogpostRoutes = require('./blogpostRoutes');
+const commentRoutes = require('./commentRoutes');
 
-// model for blogposts possibly
+router.use('/users', userRoutes);
+router.use('/blogposts', blogpostRoutes);
+router.use('/comments', commentRoutes);
 
-// model for comments
-
-// 3 or 4 models
+module.exports = router;
