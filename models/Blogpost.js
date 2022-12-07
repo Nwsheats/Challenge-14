@@ -23,13 +23,13 @@ Blogpost.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'user',
-        key: 'name',
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    // },
   },
   {
     sequelize,

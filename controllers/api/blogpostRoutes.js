@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Blogpost, Comment } = require('../../models');
 const sessAuth = require('../../utils/auth');
 
-router.get('/', sessAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
       const blogposts = await Blogpost.findAll({
         include: [Comment]
@@ -28,7 +28,7 @@ router.get('/', sessAuth, async (req, res) => {
   });
 
 
-router.post('/', sessAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newBlogpost = await Blogpost.create({
       ...req.body,

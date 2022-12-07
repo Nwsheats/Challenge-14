@@ -19,20 +19,21 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'user',
-        key: 'name',
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    // },
     blogpost_id: {
         type: DataTypes.INTEGER,
         references: {
           model: 'blogpost',
           key: 'id',
         },
-  }},
+  }
+},
   {
     sequelize,
     timestamps: false,
