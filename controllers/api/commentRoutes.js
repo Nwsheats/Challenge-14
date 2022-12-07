@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comment, Blogpost, User } = require('../../models');
 const sessAuth = require('../../utils/auth');
 
-router.get('/', sessAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
       const comments = await Comment.findAll({
         include: [Blogpost, User]
@@ -27,7 +27,7 @@ router.get('/', sessAuth, async (req, res) => {
     }
   });
 
-router.post('/', sessAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newComment = await Comment.create({
       ...req.body,
@@ -53,7 +53,7 @@ router.put('/:id', async (req, res) => {
         res.status(400).json(err);
   }}); 
 
-router.delete('/:id', sessAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const commentData = await Comment.destroy({
       where: {
