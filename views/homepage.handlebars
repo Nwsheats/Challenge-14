@@ -1,3 +1,15 @@
 {{!-- Same as Main but without a login button --}}
-
-Hello World!
+<div>
+{{!-- {{#each users as |user|}} --}}
+    <div class="card d-flex">
+        <div class="card-body bg-dark justify-content-between">
+        <h5 class="card-title text-white">{{blogpost.title}}</h5>
+        <p class="text-white">Posted by {{user.name}} on {{blogpost.date_created}}</p>
+        </div>
+        <div class="card-body">
+        <p class="card-text">{{blogpost.contents}}</p>
+        </div>
+    </div>
+</div>
+{{!-- {{/each}} --}}
+</div>

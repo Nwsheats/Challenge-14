@@ -11,13 +11,24 @@
 </head>
     <nav class="navbar navbar-dark bg-dark d-flex">
         <div class="row w-100 justify-content-start">
-            <a class="display-5 mx-4 text-white">Home</h1>
-            <a class="display-5 mx-4 text-white">Dashboard</h1>
-            <a class="display-5 mx-4 text-white">Logout</h1>
+            <a href="#" class="display-5 mx-4 text-white">Home</a>
+            <a href="#" class="display-5 mx-4 text-white">Dashboard</a>
+            {{#if logged_in}}
+            <a href="#" class="button display-5 mx-4 text-white" id="logout">Logout</a>
+            {{/if}}
         </div>
     </nav>
+    <header class="jumbotron bg-dark d-flex">
+        <div class="bg-success rounded">
+        <h2 class="display-5 my-3 text-white mx-3">The Tech Blog</h2>
+        </div>
+    </header>
 <body>
+    <main class="container w-100 container-fluid border">
     {{{ body }}} 
+    </main>
 </body>
-<script src="script.js"></script>
+{{#if logged_in}}
+  <script src="../../public/js/logout.js"></script>
+{{/if}}
 </html>
