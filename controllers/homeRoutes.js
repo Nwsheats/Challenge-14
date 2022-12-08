@@ -14,9 +14,20 @@
 const router = require('express').Router();
 
 router.get('/', async (req, res) => {
-    res.render('homepage')
-})
+    const data = [{
+        name: 'John Stone',
+        blogposts: [{
+            title: 'Tech Demo',
+            contents: 'This is a tech demo',
+            date_created: '12/7/2022'
+        }]
+    }];
+    res.render('homepage', {data})
+});
 
 
+router.get('/login', async (req, res) => {
+    res.render('login')
+});
 
 module.exports = router;

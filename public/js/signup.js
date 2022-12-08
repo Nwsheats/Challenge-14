@@ -1,7 +1,3 @@
-// button listener events for signup form
-// require fetch
-
-
 const signupFormHandler = async (event) => {
     event.preventDefault();
   

@@ -1,15 +1,18 @@
 {{!-- Same as Main but without a login button --}}
+
+
 <div>
-{{!-- {{#each users as |user|}} --}}
-    <div class="card d-flex">
+{{#each data as |blog|}}
+<div class="card d-flex">
         <div class="card-body bg-dark justify-content-between">
-        <h5 class="card-title text-white">{{blogpost.title}}</h5>
-        <p class="text-white">Posted by {{user.name}} on {{blogpost.date_created}}</p>
+            {{#each blog.blogposts as |post|}}
+        <h5 class="card-title text-white">{{post.title}}</h5>
+        <p class="text-white">Posted by {{blog.name}} on {{post.date_created}}</p>
         </div>
         <div class="card-body">
-        <p class="card-text">{{blogpost.contents}}</p>
+        <p class="card-text">{{post.contents}}</p>
         </div>
+            {{/each}}
     </div>
-</div>
-{{!-- {{/each}} --}}
+{{/each}}
 </div>
